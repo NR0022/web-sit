@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Proxy বিক্রয়</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            background-color: #0088cc;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 40px auto;
+            max-width: 300px;
+        }
+        .menu button {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #0088cc;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu button:hover {
+            background-color: #005f99;
+        }
+        .response-box {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>👋 স্বাগতম! IP Proxy সেবা</h1>
+    <div class="menu">
+        <button onclick="respond('buy')">🛒 Buy IP</button>
+        <button onclick="respond('stock')">📦 View Stock</button>
+        <button onclick="respond('deposit')">💰 Deposit</button>
+        <button onclick="respond('info')">ℹ️ My Info</button>
+        <button onclick="respond('help')">📞 Help / Support</button>
+    </div>
+    <div class="response-box" id="responseBox">
+        👉 নিচের বাটন থেকে একটি অপশন নির্বাচন করুন।
+    </div>
+
+    <script>
+        function respond(action) {
+            const box = document.getElementById("responseBox");
+            switch(action) {
+                case 'buy':
+                    box.innerHTML = "🛒 প্রিমিয়াম আইপি কিনতে আমাদের Telegram বট ব্যবহার করুন বা যোগাযোগ করুন।";
+                    break;
+                case 'stock':
+                    box.innerHTML = "📦 বর্তমানে আমাদের স্টকে আছে: 🇺🇸 USA, 🇬🇧 UK, 🇩🇪 Germany IP।";
+                    break;
+                case 'deposit':
+                    box.innerHTML = "💰 ডিপোজিট করতে বিকাশ/নগদ নাম্বারে টাকা পাঠিয়ে Transaction ID দিন: 01XXXXXXXXX";
+                    break;
+                case 'info':
+                    box.innerHTML = "ℹ️ আপনার তথ্য দেখতে Telegram বট ব্যবহার করুন।";
+                    break;
+                case 'help':
+                    box.innerHTML = "📞 সহায়তার জন্য যোগাযোগ করুন: @Owner_Facebook_ID_Receiver_Bot";
+                    break;
+                default:
+                    box.innerHTML = "👉 একটি অপশন নির্বাচন করুন।";
+            }
+        }
+    </script>
+</body>
+</html>
